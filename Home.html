@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-pink-100 flex items-center justify-center min-h-screen">
+    <audio id="valentine-audio" src="songsong.mp3" autoplay></audio>
+    <div class="bg-white p-6 rounded-2xl shadow-xl text-center max-w-sm">
+        <div class="text-red-500 text-4xl animate-pulse">❤️</div>
+        <h1 class="text-2xl font-bold mt-4 text-red-600">Happy Valentine's Day!</h1>
+        <p class="text-gray-600 mt-2 italic">You're gorgeous as a flower, Palagi mong galingan! Sana matupad lahat ng pangarap
+            at mga gusto mo. Wish you a day filled with love and happiness! 🌸</p>
+        <button class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition"
+            id="love-btn">
+            Click Me! 💌
+        </button>
+        <img src="flow.jpg" id="janea-img" class="hidden mt-4">
+    </div>
+    <script>
+        const audio = document.getElementById('valentine-audio');
+        const loveBtn = document.getElementById('love-btn');
+        const janeaImg = document.getElementById('janea-img');
+        
+        loveBtn.addEventListener('click', () => {
+            janeaImg.classList.remove('hidden');
+            audio.play();
+        });
+    </script>
+</body>
+
+</html>
+
